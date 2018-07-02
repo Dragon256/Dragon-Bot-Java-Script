@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+rconst Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.'
 
@@ -92,7 +92,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed() 
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
-      .setDescription(`
+      .setDescription(
 
 ***__وصف عن البوت__***
 **
