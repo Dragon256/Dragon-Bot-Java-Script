@@ -86,7 +86,6 @@ client.on('message', function(msg) {
 
 
 
-
 client.on('message', message => {
   if (message.content === "-inv") {
       if(!message.channel.guild) return;
