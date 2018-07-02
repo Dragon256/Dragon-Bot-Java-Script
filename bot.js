@@ -87,7 +87,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', message => {
-  if (message.content === "$inv") {
+  if (message.content === "-inv") {
       if(!message.channel.guild) return;
   let embed = new Discord.RichEmbed()
   .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
