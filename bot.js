@@ -93,7 +93,6 @@ client.on('message', message => {
   .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
   .setTitle(`:small_orange_diamond:اضغط هنا `)
   .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=463099813114937344&permissions=8&scope=bot`)
-  .addField(`عدد السيرفرات:${client.guilds.size}`,`عدد المستخدمين:${client.users.size}`)
   .setThumbnail(message.author.avatarURL)
   .addField(':small_blue_diamond:By', "<@" + message.author.id + ">")        
 message.channel.sendEmbed(embed);
