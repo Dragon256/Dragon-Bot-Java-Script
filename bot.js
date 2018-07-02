@@ -110,10 +110,10 @@ let newUserChannel = newMember.voiceChannel
 let oldUserChannel = oldMember.voiceChannel
  if(oldUserChannel === undefined && newUserChannel !== undefined) {
    rebel++;
-guild.channels.find('id', '463447188341653514').setName(" Voice「"+rebel+"」");
+guild.channels.find('id', '463448172291686430').setName(" Voice「"+rebel+"」");
 } else if(newUserChannel === undefined){
   rebel--;
-guild.channels.find('id', '463447188341653514').setName(" Voice「"+rebel+"」");
+guild.channels.find('id', '463448172291686430').setName(" Voice「"+rebel+"」");
 }
 });
 client.on('message', Codes => {
