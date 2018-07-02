@@ -60,8 +60,6 @@ client.on('message', message => {
 
 
 
-
-
 client.on('message', function(msg) {
     const prefix = '-'
     if(msg.content.startsWith (prefix  + 'server')) {
@@ -81,14 +79,6 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
   });
-
-
-
-
-
-
-
-
 
 
 client.login(process.env.BOT_TOKEN);
