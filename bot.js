@@ -1,4 +1,4 @@
-rconst Discord = require('discord.js');
+rconst discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.'
 
