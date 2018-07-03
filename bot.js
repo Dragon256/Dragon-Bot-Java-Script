@@ -137,9 +137,36 @@ client.on('message',async message =>{
     let args = message.content.split(' ').slice(1).join(" ");
     if(message.content.startsWith(prefix + "say")) {
         if(!args) return message.reply('اكتب الكلام اللذي تريد البوت ان يكرره');
-        message.channel.send('-' + args);
+        message.channel.send(args);
     }
 });
+
+
+
+var prefix = "-";
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "embed") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x23b2d6)
+    message.channel.sendEmbed(say);
+    message.delete();
+  }
+
+
+});
+
 
 
 
