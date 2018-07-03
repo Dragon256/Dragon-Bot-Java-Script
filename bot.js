@@ -48,7 +48,7 @@ client.user.setGame(`I will be soon !`,"http://twitch.tv/S-F")
   .setColor("RANDOM")
    .setThumbnail(`${mentionavatar.avatarURL}`)
   .addField("الاسم:",`<@` + `${mentionavatar.id}` + `>`, true)
-  .addField('التاج الخاص بحسابك:',"#" +  `${mentionavatar.discriminator}`, true)
+  .addField('التاج الخاص بحسابك:',"#" +  `**${mentionavatar.discriminator}**`, true)
    .addField("الايدي الخاص بحسابك:", "**[" + `${mentionavatar.id}` + "]**", true)
   .addField("تم انشاء حسابك في :", "**[" + `${mentionavatar.createdAt}` + "]**", true)
      
