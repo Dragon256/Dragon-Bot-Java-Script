@@ -132,26 +132,26 @@ client.on('guildCreate', guild => {
 
 
 
-client.on('message', message => {
+ client.on('message', message => {
          if(!message.channel.guild) return;
 
 
-     if (message.content === prefix + "info") {
+     if (message.content === "-info") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
-        .setAuthor(`${client.user.username}`,`${client.user.avatarURL}`)
-              .setThumbnail(`${client.user.avatarURL}`)
+        .setAuthor(${client.user.username},${client.user.avatarURL})
+              .setThumbnail(${client.user.avatarURL})
        .setColor('RANDOM')
-       .addField(`برفكس البوت `, prefix ,true)
-              .addField(`عدد سيرفرات البوت 🌐`, client.guilds.size ,true)
-                            .addField(`عدد مستخدمين البوت 👥`, client.users.size ,true)
-                     .addField(`الرومات 📚`, client.channels.size ,true)
-       .addField(`مساحة تخزين البوت 🎞`, (process.memoryUsage().rss / 1048576).toFixed() ,true)
-       .addField(`سرعة الأتصال 📶`, Date.now() - message.createdTimestamp ,true)
-       .addField(`اسم البوت 💠`, client.user.tag ,true)
+       .addField(برفكس البوت, prefix ,true)
+              .addField(عدد سيرفرات البوت 🌐, client.guilds.size ,true)
+                            .addField(عدد مستخدمين البوت 👥, client.users.size ,true)
+                     .addField(الرومات 📚, client.channels.size ,true)
+       .addField(مساحة تخزين البوت 🎞, (process.memoryUsage().rss / 1048576).toFixed() ,true)
+       .addField(سرعة الأتصال 📶, Date.now() - message.createdTimestamp ,true)
+       .addField(اسم البوت 💠, client.user.tag ,true)
 message.channel.sendEmbed(embed);
-    
-     
+
+
 }
 });
 
