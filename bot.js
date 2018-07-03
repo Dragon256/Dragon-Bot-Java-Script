@@ -132,6 +132,14 @@ client.on('guildCreate', guild => {
 
 
 
+client.on('message',async message =>{ 
+     var prefix = "-";
+    let args = message.content.split(' ').slice(1).join(" ");
+    if(message.content.startsWith(prefix + "say")) {
+        if(!args) return message.reply('اكتب الكلام اللذي تريد البوت ان يكرره');
+        message.channel.send('-' + args);
+    }
+});
 
 
 
