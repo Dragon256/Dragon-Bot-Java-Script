@@ -123,5 +123,14 @@ if (message.content.startsWith('-support')){
 
 
 
+client.on('guildCreate', guild => {
+  client.channels.get("463703228052275210").send(`**سيرفر جديد قد اضاف البوت ✅
+اسم السيرفر : __${guild.name}__
+صاحب السيرفر: __${guild.owner}__**`)
+});
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
