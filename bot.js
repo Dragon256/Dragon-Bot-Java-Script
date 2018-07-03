@@ -132,14 +132,6 @@ client.on("guildCreate", guild => {
     client.channels.get("463703228052275210").send(embed)
   });
 
-client.on("guildCreate", guild => {
-    client.channels.get("463703228052275210").send(' ***  البوت  ***   **دخل الى **   ***[ ' + `${guild.name}` + ' ]***   ,   **  صاحب السيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
-    
-    client.on("guildDelete", guild => {
-    client.channels.get("463703228052275210").send(' ***  البوت  ***   **خرج من **   ***[ ' + `${guild.name}` + ' ]***   ,   **  صاحب السيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
-
 
 
 client.on('message',async message =>{ 
