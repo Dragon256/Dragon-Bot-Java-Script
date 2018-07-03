@@ -216,7 +216,7 @@ client.on('message', message => {
 
 
 
-var prefix= "-";
+var refix= "-";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'v2min')) {
      let args = message.content.split(" ").slice(1);
