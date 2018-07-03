@@ -143,7 +143,7 @@ client.on('message',async message =>{
 
 
 
-var prefix = "-";
+var refix = "-";
 
 client.on('message', message => {
   if (message.author.bot) return;
