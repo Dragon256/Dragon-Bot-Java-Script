@@ -65,7 +65,7 @@ client.user.setGame(`I will be soon !`,"http://twitch.tv/S-F")
 client.on("guildCreate", guild => {
     let embed = new Discord.RichEmbed () 
     .setTitle('سيرفر جديد قد اضاف البوت :white_check_mark:')
-    .addField(' ***اسم السيرفر  :***[' + `${guild.name}` + ']   
+    .addField(' ***اسم السيرفر  :***[' + `${guild.name}` +
     .addField(' **صاحب السيرفر  : **' + `${guild.owner.user.username}` + '')
     .setFooter(' ( Dragon#6286 ) جميع الحقوق محفوظة الى مبرمج البوت ')
     .setTimestamp()
