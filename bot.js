@@ -327,32 +327,18 @@ var day = message.guild.createdAt.getDate()
 
 
 client.on('message', function(message) {
-    if(!message.channel.guild) return;
-if(message.content ===  '-color 140') {
-if(message.member.hasPermission('MANAGE_ROLES')) {
-setInterval(function(){})
-message.channel.send('جاري عمل الالوان |✅')
-}else{
-message.channel.send(' ``` MANAGE_ROLES ``` انت لا تملك برمشن')
-}
-}
+    if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        var iiMo = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTimestamp()
+        .setTitle('``I have received a new DM !``')
+        .setThumbnail(`${message.author.avatarURL}`)
+        .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
+        .setFooter(`From **${message.author.tag} (${message.author.id})**`)
+    client.channels.get("463392799199592458").send({embed:iiMo});
+    }
 });
-
-client.on('message', message=>{
-if (message.content ===  '-color 140'){
-if(!message.channel.guild) return;
-if (message.member.hasPermission('MANAGE_ROLES')){
-  setInterval(function(){})
-    let count = 0;
-    let ecount = 0;
-for(let x = 1; x < 141; x++){
-message.guild.createRole({name:x,
-color: 'RANDOM'})
-}
-}
-}
-});
-
 
 
 
