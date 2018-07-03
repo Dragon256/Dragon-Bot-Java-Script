@@ -62,7 +62,7 @@ client.user.setGame(`I will be soon !`,"http://twitch.tv/S-F")
 
 
 
-var prefix = '-';
+var refix = '-';
 client.on('message', message => {
     let args = message.content.split(" ").slice(1);
 if (message.content.startsWith(prefix + 'clear')) {
