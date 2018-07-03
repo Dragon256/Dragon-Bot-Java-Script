@@ -113,7 +113,7 @@ if (message.content.startsWith('-support')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("random")
-  .setDescription(" https://discord.gg/wyMhrNw ")
+  .setDescription(" سيرفر الدعم الفني الخاص ب دراجون بوت :- https://discord.gg/wyMhrNw  ")
      
      
   message.channel.sendEmbed(ra3d);
