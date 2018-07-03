@@ -123,12 +123,22 @@ if (message.content.startsWith('-support')){
 
 
 
-client.on('guildCreate', guild => {
-  client.channels.get("463703228052275210").send(`**سيرفر جديد قد اضاف البوت ✅
-اسم السيرفر : __${guild.name}__
-صاحب السيرفر: __${guild.owner}__**`)
-});
+client.on("guildCreate", guild => {
+    let embed = new Discord.RichEmbed () 
+    .setTitle('سيرفر جديد قد اضاف البوت :white_check_mark:')
+    .addField(' ***اسم السيرفر  :***[' + `${guild.name}` + ']   **صاحب السيرفر  : **' + `${guild.owner.user.username}` + '')
+    .setFooter('شكراَ لأدخال البوت الى السيرفر :heart:')
+    .setTimestamp()
+    client.channels.get("463703228052275210").send(embed)
+  });
 
+  client.on("guildDelete", guild => {
+  let embed = new Discord.RichEmbed ()
+  .setTitle('سيرفر قد اخرج البوت :x:')
+  .addField(' ***البوت قد خرج من  :***[' + `${guild.name}` + ']     **صاحب السيرفر  : **' + `${guild.owner.user.username}` +  ' ')
+  .setTimestamp()
+  client.channels.get("اي دي الروم").send(embed)
+});
 
 
 
