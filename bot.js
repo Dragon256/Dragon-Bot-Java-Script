@@ -107,4 +107,11 @@ message.channel.sendEmbed(embed);
 
 
 
+client.on('message', msg => {
+  if (msg.content === '-support') {
+    msg.reply('سيرفر الدعم الفني :- https://discord.gg/wyMhrNw ,');
+  }
+});
+
+
 client.login(process.env.BOT_TOKEN);
