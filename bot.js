@@ -107,11 +107,21 @@ message.channel.sendEmbed(embed);
 
 
 
-client.on('message', msg => {
-  if (msg.content === '-support') {
-    msg.reply('سيرفر الدعم الفني :- https://discord.gg/wyMhrNw ,');
-  }
+
+client.on('message', message => {
+if (message.content.startsWith('-support')){
+     let ra3d = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("random")
+  .setDescription(" https://discord.gg/wyMhrNw ")
+     
+     
+  message.channel.sendEmbed(ra3d);
+    }
 });
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
