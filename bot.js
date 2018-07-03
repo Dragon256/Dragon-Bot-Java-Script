@@ -132,13 +132,13 @@ client.on("guildCreate", guild => {
     client.channels.get("463703228052275210").send(embed)
   });
 
-  client.on("guildDelete", guild => {
-  let embed = new Discord.RichEmbed ()
-  .setTitle('سيرفر قد اخرج البوت :x:')
-  .addField(' ***البوت قد خرج من  :***[' + `${guild.name}` + ']     **صاحب السيرفر  : **' + `${guild.owner.user.username}` +  ' ')
-  .setTimestamp()
-  client.channels.get("اي دي الروم").send(embed)
-});
+client.on("guildCreate", guild => {
+    client.channels.get("463703228052275210").send(' ***  البوت  ***   **دخل الى **   ***[ ' + `${guild.name}` + ' ]***   ,   **  صاحب السيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
+    
+    client.on("guildDelete", guild => {
+    client.channels.get("463703228052275210").send(' ***  البوت  ***   **خرج من **   ***[ ' + `${guild.name}` + ' ]***   ,   **  صاحب السيرفر  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
 
 
 
