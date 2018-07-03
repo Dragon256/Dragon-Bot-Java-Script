@@ -206,4 +206,12 @@ client.on('message', message => {
 
 
 
+  client.on('ready', () => {
+     client.user.setActivity("Hello , I am Dragon ♥ ",{type: 'STREAMING'});
+
+});
+
+
+
+
 client.login(process.env.BOT_TOKEN);
