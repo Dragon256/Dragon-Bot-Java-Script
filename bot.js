@@ -206,10 +206,6 @@ client.on('message', message => {
 
 
 
-  client.on('ready', () => {
-     client.user.setActivity("Hello , I am Dragon ♥ ",{type: 'STREAMING'});
-
-});
 
 
 
