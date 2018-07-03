@@ -143,28 +143,42 @@ client.on('message',async message =>{
 
 
 
-var refix = "-";
-
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
+let rebel;
+client.on("ready", async  => {
+    let guild = client.guilds.get("463104522773069825");
+  let users = guild.members.map(member => member.user.id);
+  let i;
+  rebel=0;
+for (i=0 ; i < users.length ; i++) {
+ let   check = guild.members.get(users[i]);
+if(!check.voiceChannelID){
+        continue;
+}else{
+  rebel++;
+}
+}
+guild.channels.find('id', '463448172291686430').setName(" Voice「"+rebel+"」");
+  client.setInterval(() =>{
+    let d = Date.now()
+  }, 5000);
+});
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    let guild = client.guilds.get("463104522773069825");
+let newUserChannel = newMember.voiceChannel
+let oldUserChannel = oldMember.voiceChannel
+ if(oldUserChannel === undefined && newUserChannel !== undefined) {
+   rebel++;
+guild.channels.find('id', '463448172291686430').setName(" Voice「"+rebel+"」");
+} else if(newUserChannel === undefined){
+  rebel--;
+guild.channels.find('id', '463448172291686430').setName(" Voice「"+rebel+"」");
+}
+});
+client.on('message', Codes => {
   
- 
-
-if (command == "embed") {
-    let say = new Discord.RichEmbed()
-    .setDescription(args.join("  "))
-    .setColor(0x23b2d6)
-    message.channel.sendEmbed(say);
-    message.delete();
-  }
-
-
+  if(Codes.content === "-صوت") {
+      Codes.channel.send(" Voice「"+rebel+"」");
+}
 });
 
 
