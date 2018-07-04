@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '-'
+const prefix = "-"; 
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -352,11 +352,12 @@ client.on('message', message => {
 
 
 client.on('message', message => {
+const prefix = "-";
     if (message.author.id === client.user.id) return;
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + '-bc') {
+if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
 message.channel.send("**.bc <message>**");
 return;
