@@ -554,7 +554,7 @@ client.on("message", message => {
     let command = message.content.split(" ")[0];
     
     if (command === "-mute") {
-          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** 'Manage Roles' لا يوجد لديك برمشن  **").catch(console.error);
+          if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("** 'MANAGE_MESSAGES' لا يوجد لديك برمشن  **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
     let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
@@ -591,7 +591,7 @@ client.on("message", message => {
     let command = message.content.split(" ")[0];
     
     if (command === "-unmute") {
-          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** 'Manage Roles' لا يوجد لديك برمشن  **").catch(console.error);
+          if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("** 'MANAGE_MESSAGES' لا يوجد لديك برمشن  **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
     let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
