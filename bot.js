@@ -594,4 +594,18 @@ client.on('message', message => {
 
 
 
+
+
+client.on('guildCreate', guild => {
+    
+
+    var star = new Discord.RichEmbed()
+    .setTitle("Dragon Bot")
+    .setColor(000000)
+    .setDescription(`***سيرفر جديد قد اضاف البوت :white_check_mark: ***`)                      
+              .setFooter(`Dragon Bot`, 'https://cdn.discordapp.com/attachments/387286451034783744/388013469275914240/thesilent_1x.jpg')
+        guild.owner.send(star)
+  })
+
+
 client.login(process.env.BOT_TOKEN);
