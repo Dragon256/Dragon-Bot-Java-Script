@@ -390,5 +390,142 @@ return;
 
 
 
+client.on('message', message => {
+    if (message.content === "-help") {
+    let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setFooter(`© SHYBOY_05 ™.`, 'https://images-ext-2.discordapp.net/external/X9SanEG0s7Dtv3krTgy-kod_fj6JRVJ2AG4JryCiiz0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/375761288518828042/fffa31c797e88cf059dd6db424ff456a.png?width=80&height=80')
+  .setColor("#000000")
+  .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3: تم ارسال الرسالة في الخاص :white_check_mark: ")
+  
+  
+  
+  message.channel.sendEmbed(embed);
+  }
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   client.on("message", message => {
+    if (message.content === "-help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
+        **__1-__:books:🧐 بوت عربي🧐:books:
+         __2-__:white_check_mark: :part_alternation_mark:️ استخدامه جدا سهل:part_alternation_mark:️:white_check_mark: 
+         __3-__:gear:️صيانه كل يوم:gear:️
+         __4-__:money_with_wings: مجاني :money_with_wings:**`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+  
+
+  
+   
+  
+  
+  
+   client.on("message", message => {
+      if (message.content === "-help") {
+       const embed = new Discord.RichEmbed() 
+           .setColor("#FF0000")
+           .setDescription(`**🕴🏾الاوامر العامة|Public Commands🕴🏾**
+  ** __-id__->**معلومات عنك
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-server__->**معلومات عن السيرفر
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-Bot__->**معلومات عن البوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-ping__->**سرعة اتصال البوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-avatar__->**لعرض صورتك وعرض صور الاخرين , مع المنشن
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+   **__-image__->**صورة السيرفر
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-say__->**ليكرر البوت كلامك
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-time__->**الاوقات
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-help__->**تظهر لك هذي القائمة
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
+     message.author.sendEmbed(embed)
+     
+     }
+     });
+  
+  
+  
+  
+ 
+  
+  
+   client.on("message", message => {
+      if (message.content === "-help") {
+       const embed = new Discord.RichEmbed() 
+           .setColor("#57FEFF")
+           .setDescription(`**⚙️اوامر الادارة|Administrator⚙️**
+  ** __-kick__->**طرد
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-ban__->**باند
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-mute__->**ميوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-unmute__->**فك ميوت
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-clear__->**حذف الشات بعدد
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  ** __-tc__->**انشاء شات
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-vc__->**انشاء روم
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  **__-bc__->**برود كاست `)
+     message.author.sendEmbed(embed)
+     }
+     });
+  
+  
+  
+  
+  
+  
+  
+     client.on("message", message => {
+      if (message.content === "-help") {
+       const embed = new Discord.RichEmbed() 
+           .setColor("#FF00FF")
+           .setFooter('By Dragon#6286 ')
+           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس ❤️ 💛 💚 💙 💜 🖤__**`)
+     message.author.sendEmbed(embed)
+     
+     }
+     });
+
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
