@@ -337,21 +337,16 @@ client.on('guildMemberAdd', member=> {
 
 
 
-const refix = "-"; 
 client.on('message', message => {
-
-  if (message.content.startsWith( prefix + "sug")) {
-  if (!message.channel.guild) return;
-  let args = message.content.split(" ").slice(1).join(' ');
-  client.channels.get("464110649308348426").send(
-      "\n" + "**" + "● السيرفر :" + "**" +
-      "\n" + "**" + "» " + message.guild.name + "**" +
-      "\n" + "**" + " ● المرسل : " + "**" +
-      "\n" + "**" + "» " + message.author.tag + "**" +
-      "\n" + "**" + " ● الرسالة : " + "**" +
-      "\n" + "**" + args + "**")
-  }
-  });
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('-bc-bot')){
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
 
 
 
