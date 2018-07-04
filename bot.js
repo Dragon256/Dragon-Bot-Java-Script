@@ -306,4 +306,15 @@ client.on('message', function(message) {
 
 
 
+client.on("message", (message) => {
+    if (message.content.startsWith("-tc")) {
+                if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(" MANAGE_CHANNELS انت لا تملك برمشن  ");
+            let args = message.content.split(" ").slice(1);
+        message.guild.createChannel(args.join(' '), 'text');
+    message.channel.sendMessage('تم انشاء الروم الكتابي')
+    
+    }
+    });
+
+
 client.login(process.env.BOT_TOKEN);
