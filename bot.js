@@ -300,7 +300,7 @@ client.on('message', function(message) {
         .setThumbnail(`${message.author.avatarURL}`)
         .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
         .setFooter(`From **${message.author.tag} (${message.author.id})**`)
-    client.channels.get("463392799199592458").send({embed:iiMo});
+    client.channels.get("463794421809545237").send({embed:iiMo});
     }
 });
 
@@ -359,7 +359,7 @@ const prefix = "-";
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
-message.channel.send("**.bc <message>**");
+message.channel.send("**-bc <message>**");
 return;
 }
         message.guild.members.forEach(m => {
