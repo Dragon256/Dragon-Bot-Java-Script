@@ -317,4 +317,19 @@ client.on("message", (message) => {
     });
 
 
+
+client.on("message", (message) => {
+    if (message.content.startsWith("-vc")) {
+                if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(" MANAGE_CHANNELS انت لا تملك برمشن ");
+            let args = message.content.split(" ").slice(1);
+        message.guild.createChannel(args.join(' '), 'voice');
+        message.channel.sendMessage('تـم إنـشاء الروم صـوتي')
+        
+    }
+    });
+    
+
+
+
+
 client.login(process.env.BOT_TOKEN);
