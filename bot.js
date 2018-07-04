@@ -351,7 +351,7 @@ client.on('message', message => {
 
 
 
-Client.on("message", message => {
+client.on("message", message => {
     var refix = "-";
  
             var args = message.content.substring(prefix.length).split(" ");
