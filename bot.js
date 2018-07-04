@@ -331,37 +331,9 @@ client.on("message", (message) => {
 
 
 
-client.on('message', message => {
-
-    if(message.content === prefix + "mutechannel") {
-                        if(!message.channel.guild) return message.reply('** This command only for servers**');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ** MANAGE_MESSAGES انت لا تملك برمشن **');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: false
-
-           }).then(() => {
-               message.reply("** :white_check_mark: لقد تم اغلاق الشات  **")
-           });
-             }
-
-  
-  
- if(message.content === prefix + "unmutechannel") {
-                     if(!message.channel.guild) return message.reply('** هذا الامر فقط للسيرفرات :x: **');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**MANAGE_MESSAGES انت لا تملك برمشن**');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: true
-
-           }).then(() => {
-               message.reply("**:white_check_mark: لقد تم فتح الشات **")
-           });
-             }
-             
-      
-    
-});
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","Muted"));
+    });
 
 
 
