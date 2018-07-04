@@ -669,4 +669,19 @@ client.on("message", message => {
 
 
 
+client.on("message", (message) => {
+    if (message.content.startsWith("-kick")) {
+      if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply(' ** KICK_MEMBERS انت لا تملك برمشن **');
+        var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(member.displayName + " ** :white_check_mark: لقد تم اعطاء العضو كيك ** ");
+        }).catch(() => {
+            message.channel.send("Error -_-");
+        });
+    }
+});
+
+
+
+
 client.login(process.env.BOT_TOKEN);
