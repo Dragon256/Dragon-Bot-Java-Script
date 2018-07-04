@@ -625,7 +625,7 @@ client.on("message", (message) => {
     if (message.content.startsWith("-kick")) {
       if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply(' ** KICK_MEMBERS انت لا تملك برمشن **');
         var member= message.mentions.members.first();
-      message.guild.member(member).kick.then((member) => {
+      message.guild.member(member)kick.then((member) => {
             message.channel.send(member.displayName + " ** :white_check_mark: لقد تم اعطاء العضو كيك ** ");
         }).catch(() => {
             message.channel.send("Error -_-");
@@ -650,7 +650,7 @@ message.channel.send("**-bc <message>**");
 return;
 }
         message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
+   if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("** 'ADMINISTRATOR' لا يوجد لديك برمشن  **").catch(console.error);
             var bc = new Discord.RichEmbed()
             .setAuthor(message.author.username, message.author.avatarURL)
             .addField('** الـسيرفر**', `${message.guild.name}`,true)
