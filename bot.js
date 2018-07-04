@@ -332,8 +332,26 @@ client.on("message", (message) => {
 
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","Muted"));
+    member.addRole(member.guild.roles.find("name","Member"));
     });
+
+
+
+var prefix = "-"
+client.on('message', message => {
+
+  if (message.content.startsWith( prefix + "sug")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.channels.get("464110649308348426").send(
+      "\n" + "**" + "● السيرفر :" + "**" +
+      "\n" + "**" + "» " + message.guild.name + "**" +
+      "\n" + "**" + " ● المرسل : " + "**" +
+      "\n" + "**" + "» " + message.author.tag + "**" +
+      "\n" + "**" + " ● الرسالة : " + "**" +
+      "\n" + "**" + args + "**")
+  }
+  });
 
 
 
