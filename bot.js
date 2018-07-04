@@ -596,16 +596,39 @@ client.on('message', message => {
 
 
 
-client.on('guildCreate', guild => {
+client.on("message", message => {
+    if (message.author.bot) return;
     
-
-    var star = new Discord.RichEmbed()
-    .setTitle("Dragon Bot")
-    .setColor(000000)
-    .setDescription(`***سيرفر جديد قد اضاف البوت :white_check_mark: ***`)                      
-              .setFooter(`Dragon Bot`, 'https://cdn.discordapp.com/attachments/387286451034783744/388013469275914240/thesilent_1x.jpg')
-        guild.owner.send(star)
-  })
+    let command = message.content.split(" ")[0];
+    
+    if (command === "-mute") {
+          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** 'Manage Roles' لا يوجد لديك برمشن  **").catch(console.error);
+    let user = message.mentions.users.first();
+    let modlog = client.channels.find('name', 'log');
+    let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
+    if (!muteRole) return message.reply("** 'Muted' لا يوجد رتبة الميوت  **").catch(console.error);
+    if (message.mentions.users.size < 1) return message.reply('** يجب عليك عمل منشن للشخص اولاَ  **').catch(console.error);
+    
+    const embed = new Discord.RichEmbed()
+      .setColor(0x00AE86)
+      .setTimestamp()
+      .addField('الأستعمال:', '-mute')
+      .addField('تم ميوت:', `${user.username}#${user.discriminator} (${user.id})`)
+      .addField('بواسطة:', `${message.author.username}#${message.author.discriminator}`)
+     
+     if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** Manage Roles لا يوجد لدي برمشن **').catch(console.error);
+   
+    if (message.guild.member(user).roles.has(muteRole.id)) {
+  return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت**").catch(console.error);
+  } else {
+      message.guild.member(user).addRole(muteRole).then(() => {
+  return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت كتابي**").catch(console.error);
+  });
+    }
+  
+  };
+  
+  });
 
 
 client.login(process.env.BOT_TOKEN);
