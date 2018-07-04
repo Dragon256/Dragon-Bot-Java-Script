@@ -337,7 +337,7 @@ client.on('guildMemberAdd', member=> {
 
 
 
-var prefix = "-"
+var refix = "-"
 client.on('message', message => {
 
   if (message.content.startsWith( prefix + "sug")) {
