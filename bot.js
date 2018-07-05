@@ -834,7 +834,7 @@ Server owner: __${guild.owner}__**`)
 '**Welcome To GM S__t__ore**'
 ]
 client.on('guildMemberAdd', member => {
-const codes = member.guild.channels.get("464550115944955905");//ايدي الشات
+const codes = member.guild.channels.get("464555487124258816");//ايدي الشات
 if(!codes) return;
 if(codes) {
 codes.send(  `${lol[Math.floor(Math.random() * lol.length)]}`);          
