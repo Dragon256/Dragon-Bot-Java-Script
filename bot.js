@@ -849,4 +849,35 @@ Server owner: __${guild.owner}__**`)
 });
 
 
+
+
+
+  const lol =
+[
+'**__W__elcome To GM Store**',
+'**W__e__lcome To GM Store**',
+'**We__l__come To GM Store**',
+'**Wel__c__ome To GM Store**',
+'**Welc__o__me To GM Store**',
+'**Welco__m__e To GM Store**',
+'**Welcom__e__ To GM Store**',
+'**Welcome __T__o GM Store**',
+'**Welcome T__o__ GM Store**',
+'**Welcome To __G__M Store**',
+'**Welcome To G__M__Store**',
+'**Welcome To GM__S__tore**',
+'**Welcome To GM __S__tore**',
+'**Welcome To GM S__t__ore**'
+]
+client.on('guildMemberAdd', member => {
+const codes = member.guild.channels.get("464550115944955905");//ايدي الشات
+if(!codes) return;
+if(codes) {
+codes.send(  `${lol[Math.floor(Math.random() * lol.length)]}`);          
+}
+});
+
+
+
+
 client.login(process.env.BOT_TOKEN);
