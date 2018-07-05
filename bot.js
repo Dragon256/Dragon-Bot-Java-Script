@@ -131,7 +131,7 @@ if(!check.voiceChannelID){
   rebel++;
 }
 }
-guild.channels.find('id', '464101304298504202').setName(" Voice「"+rebel+"」");
+guild.channels.find('id', '464101304298504202')setName(" Voice「"+rebel+"」");
   client.setInterval(() =>{
     let d = Date.now()
   }, 5000);
