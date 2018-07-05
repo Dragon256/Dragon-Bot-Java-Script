@@ -842,7 +842,11 @@ cc.on("collect", r => {
 
 
 
-
+  client.on('guildCreate', guild => {
+  client.channels.get("463703228052275210").send(`**تم اضافة البوت في سيرفر جديد مبروكك
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__**`)
+});
 
 
 client.login(process.env.BOT_TOKEN);
