@@ -4,7 +4,7 @@ const prefix = "-";
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`I will be soon !`,"http://twitch.tv/S-F")
+client.user.setGame(`Servers 11 , Users 450 , -help.`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -597,8 +597,8 @@ client.on("message", message => {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
-                             if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-
+                             
+if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(" ADMINISTRATOR انت لا تملك برمشن  ");
     if (!args[1]) {
 message.channel.send("**-bc <message>**");
 return;
@@ -677,7 +677,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(!message.channel.guild) return;
-if (message.content.startsWith('-ping')) {
+if (message.content.startsWith('w!ping')) {
 if(!message.channel.guild) return;
 var msg = `${Date.now() - message.createdTimestamp}`
 var api = `${Math.round(client.ping)}`
