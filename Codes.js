@@ -69,4 +69,4 @@ ee.send(`We Thank ${Invite.inviter}\nFor he has brought you into the server \nYo
     })
 
 	});
-client.login('NDYzMDk5ODEzMTE0OTM3MzQ0.Dhvc3A.rfXPUp-ZYsnX-CH9b3J9eRNsnOw');
+client.login('NDYzMDk5ODEzMTE0OTM3MzQ0.Dh0CZw.jY89vlth1hgcKWLZWFrlvVgCcGc');
