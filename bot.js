@@ -77,7 +77,9 @@ message.channel.sendEmbed(embed);
 
 
 
-client.once('ready', () => client.user.setUsername('Dragon Bot'));
+client.once('ready', () => {
+    client.user.setAvatar('./Dragon.png');
+});
 
 
 
