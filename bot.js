@@ -32,6 +32,7 @@ client.user.setGame(`Servers 11 , Users 450 , -help.`,"http://twitch.tv/S-F")
 
 
 
+
   client.on('message', message => {
    if (message.content.startsWith("-id")) {
                 if(!message.channel.guild) return message.reply('**هذا الامر فقط في السيرفرات وشكرا**');
