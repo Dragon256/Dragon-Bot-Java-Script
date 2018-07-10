@@ -77,6 +77,10 @@ message.channel.sendEmbed(embed);
 
 
 
+client.once('ready', () => client.user.setUsername('Dragon Bot'));
+
+
+
 client.on('message', message => {
   if (message.content === "-bot") {
       if(!message.channel.guild) return;
