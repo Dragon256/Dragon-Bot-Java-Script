@@ -55,7 +55,7 @@ if (message.content.startsWith(PREFIX + 'setplay')) {
 
 
 
-  client.on('message', message => {
+   Client.on('message', message => {
    if (message.content.startsWith("-id")) {
                 if(!message.channel.guild) return message.reply('**هذا الامر فقط في السيرفرات وشكرا**');
 
