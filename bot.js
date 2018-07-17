@@ -862,7 +862,7 @@ footer: {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`%help -  ${client.guilds.size} Servers`,`%help ${client.users.size} Users`];
+    var setGame = [`%help -  ${client.guilds.size} Servers - ${client.users.size} Users`];
     var i = -1;
     var j = 0;
     setInterval(function (){
