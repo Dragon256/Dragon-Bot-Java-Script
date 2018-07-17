@@ -21,31 +21,7 @@ client.on('ready', () => {
 
 
 
-   Client.on('message', message => {
-   if (message.content.startsWith("-id")) {
-                if(!message.channel.guild) return message.reply('**هذا الامر فقط في السيرفرات وشكرا**');
 
-               var mentionned = message.mentions.users.first();
-    var mentionavatar;
-      if(mentionned){
-          var mentionavatar = mentionned;
-      } else {
-          var mentionavatar = message.author;
-          
-      }
-   let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-   .setThumbnail(`${mentionavatar.avatarURL}`)
-  .addField("الاسم:",`<@` + `${mentionavatar.id}` + `>`, true)
-  .addField('التاج الخاص بحسابك:',"#" +  `**${mentionavatar.discriminator}**`, true)
-   .addField("الايدي الخاص بحسابك:", "**[" + `${mentionavatar.id}` + "]**", true)
-  .addField("تم انشاء حسابك في :", "**[" + `${mentionavatar.createdAt}` + "]**", true)
-     
-     
-  message.channel.sendEmbed(embed);
-  console.log('[id] Send By: ' + message.author.username)
-    }
-});
 
 
 
