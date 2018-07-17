@@ -78,7 +78,7 @@ message.channel.sendEmbed(embed);
 
 
 client.once('ready', () => {
-    client.user.setAvatar('./Dragon.png');
+    client.user.setUsername('Flame Bot');
 });
 
 
