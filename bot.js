@@ -78,7 +78,7 @@ message.channel.sendEmbed(embed);
 
 
 client.once('ready', () => {
-    client.user.setUsername('Flame Bot');
+    client.user.setAvatar('./c0b8a39938d7288757c04bbf3a11e814-d4qkrj6');
 });
 
 
