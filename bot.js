@@ -289,6 +289,7 @@ client.on("message", (message) => {
 
 
 
+
 client.on("message", (message) => {
     if (message.content.startsWith("-vc")) {
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(" MANAGE_CHANNELS انت لا تملك برمشن ");
