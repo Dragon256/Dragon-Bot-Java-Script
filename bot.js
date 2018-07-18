@@ -335,7 +335,7 @@ client.on('message', message => {
          __3-__:gear:️صيانه كل يوم:gear:️
          __4-__:money_with_wings: مجاني :money_with_wings:**
 		 __5-__::no_entry: :no_entry_sign: مانع الجحفلة (مانع الهكر):no_entry: :no_entry_sign: `)
-**اضافات جديدة قريباَ , ** ** اتمنى عجبكم البوت يا احلى ناس. :heart:**
+
    message.author.sendEmbed(embed)
    
    }
