@@ -685,7 +685,7 @@ client.on('message', message => {
   if (command == "ban") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
-  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
+  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**`BAN_MEMBERS` لا يوجد لديك برمشن **");
   if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
@@ -1088,7 +1088,105 @@ if(!message.channel.guild) return message.reply('هذا الأمر للسيرف�
 
 		
 			 
-			 
+		
+
+
+client.on("roleCreate", rc => {
+  const channel = rc.guild.channels.find("name", "log") //تقدر تغير اسم الشات
+  if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(rc.guild.name)
+  .setDescription(`***Created Role Name : *** **${rc.name}** `)
+  .setColor(`RANDOM`)
+  .setTimestamp(); 
+  channel.sendEmbed(embed)
+  }
+  });
+  
+  client.on("roleDelete",  rd => {
+  const channel = rd.guild.channels.find("name", "log")
+  if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(rd.guild.name)
+  .setDescription(`***Deleted Role Name : *** **${rd.name}** `)
+  .setColor(`RANDOM`)
+  .setTimestamp(); 
+  channel.sendEmbed(embed)
+  }
+  });
+
+client.on("channelCreate",  cc => {
+  const channel = cc.guild.channels.find("name", "log")
+  if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(cc.guild.name)
+  .setDescription(`***Channel Created Name : *** **${cc.name}** ⬅️`)
+  .setColor(`RANDOM`)
+  .setTimestamp(); 
+  channel.sendEmbed(embed)
+  }
+  });
+
+   client.on("deleteChannel",  dc => {
+  const channel = dc.guild.channels.find("name", "log")
+  if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(dc.guild.name)
+  .setDescription(`***Channel Deleted Name : *** **${dc.name}** ⬅️`)
+  .setColor(`RANDOM`)
+  .setTimestamp(); 
+  channel.sendEmbed(embed)
+  }
+  });
+
+
+
+
+
+
+
+client.on('guildMemberAdd', eyad => {
+  let channel = eyad.guild.channels.find('name', 'log');
+  let memberavatar = eyad.user.avatarURL
+    if (!channel) return;
+  let embed = new Discord.RichEmbed()
+      .setColor('GREEN')
+      .setThumbnail(memberavatar)
+      .setTitle('Member joined')
+  .setTitle('Member Joined')
+      .addField('UserName : ',`${eyad}`)
+      .addField('User Id :', "**[" + `${eyad.id}` + "]**" )
+      .addField('MemberCount :',`${eyad.guild.memberCount}`)
+      .addField('Server: ', `${eyad.guild.name}`,true)                          
+      .setFooter(" Join Log ! ")
+      .setTimestamp()
+ 
+    channel.sendEmbed(embed);
+  });
+
+
+client.on('guildMemberRemove', eyad => {
+  let channel = eyad.guild.channels.find('name', 'log');
+  let memberavatar = eyad.user.avatarURL
+    if (!channel) return;
+  let embed = new Discord.RichEmbed()
+      .setColor('RED')
+      .setThumbnail(memberavatar)
+  .setTitle('Member Left')
+      .addField('UserName : ',`${eyad}`)
+      .addField('User Id :', "**[" + `${eyad.id}` + "]**" )
+      .addField('MemberCount :',`${eyad.guild.memberCount}`)
+      .addField('Server: ', `${eyad.guild.name}`,true)                          
+      .setFooter(" Leave Log ! ")
+      .setTimestamp()
+ 
+    channel.sendEmbed(embed);
+      });
+
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
