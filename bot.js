@@ -22,6 +22,7 @@ client.on('ready', () => {
 
 
 
+
 client.on('message', message => {
     var prefix = "%"
     let command = message.content.split(" ")[0];
