@@ -141,17 +141,6 @@ client.on("message", message => {
 
 
 
-client.on('message', message => {
-  if (message.content === "%bot") {
-      if(!message.channel.guild) return;
-  let embed = new Discord.RichEmbed()
-  .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-  .addField(`عدد السيرفرات:${client.guilds.size}`,`عدد المستخدمين:${client.users.size}`)
-  .setThumbnail(message.author.avatarURL)
-  .addField(':small_blue_diamond:By', "<@" + message.author.id + ">")        
-message.channel.sendEmbed(embed);
- }
-});
 
 
  client.on('message', message => {
