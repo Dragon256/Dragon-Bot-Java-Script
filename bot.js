@@ -289,10 +289,10 @@ client.on('message', message => {
   .setFooter(`Flame Bot`, 'https://media.discordapp.net/attachments/468763296254918674/468790475072208897/c0b8a39938d7288757c04bbf3a11e814-d4qkrj6.png?width=267&height=161')
   .setColor("#000000")
   .addField("*** قم بأختيار نوع المساعدة :*** ")
-  .addField("** %help-info | مميزات البوت ** ")
-  .addField("** %help-public | الأوامر العامة ** ")
-  .addField("** %help-admin | اوامر الأدارة ** ")
-  .addField("** %help-games | اوامر الألعاب ** ")
+  .addField("** %help-info ,| مميزات البوت ** ")
+  .addField("** %help-public ,| الأوامر العامة ** ")
+  .addField("** %help-admin ,| اوامر الأدارة ** ")
+  .addField("** %help-games ,| اوامر الألعاب ** ")
 
   
   
@@ -432,7 +432,7 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By ElBrazily EG.#6286 ')
-		   .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+		   .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
 		   .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
@@ -446,8 +446,8 @@ client.on('message', message => {
       if (message.content === "%help-public") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By Dragon#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+           .setFooter('By ElBrazily EG.#6286 ')
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
 		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
@@ -462,7 +462,7 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
 		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
@@ -478,7 +478,7 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
 		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
