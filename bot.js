@@ -52,7 +52,7 @@ message.channel.sendEmbed(embed);
 client.on("message", message => {
       if (message.content === "%help-admin") {
        const embed = new Discord.RichEmbed() 
-           .setDescription(**اوامر الادارة |Administrator Commands**
+           .setDescription(`**اوامر الإدارة | Administrator Commands
            .setColor("#57FEFF")
 
   %kick @mention -> طرد
