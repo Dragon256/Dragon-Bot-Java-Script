@@ -22,6 +22,40 @@ client.on('ready', () => {
 
 
 
+bot.on('message', async message => {
+  if(message.content.startsWith(prefix + "bot-sug")) {
+  await  message.channel.send(`اكتب اقتراحك الان`)
+    let filter = m => m.author.id === message.author.id
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+
+              message.channel.send(`تم حفظ اقتراحك الرجاء انتضار الرد من قبل المبرمجين`)
+
+                var embed = new Discord.RichEmbed()
+                   .setColor(0x00AE86)
+                         .setAuthor(message.author.username, message.author.avatarURL)   
+    .setTimestamp()
+            .setDescription(`
+   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+
+${text} 
+ 
+   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+`)
+       .setThumbnail(`${message.author.avatarURL}`)
+
+   bot.channels.get("464110649308348426").sendEmbed(embed);
+
+              })
+            }
+          });
+  
+
+
+
+
 
 
  client.on("roleUpdate", (re,updated) => {
