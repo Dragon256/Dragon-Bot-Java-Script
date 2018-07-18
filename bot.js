@@ -414,8 +414,9 @@ client.on('message', message => {
       if (message.content === "%help-info") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By Dragon#6286 ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس ❤️ 💛 💚 💙 💜 🖤__**`)
+           .setFooter('By ElBrazily EG.#6286 ')
+		   .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:')
+           .setDescription(`**قريباَ جديدة اضافات **`)
      message.author.sendEmbed(embed)
      
      }
@@ -996,7 +997,7 @@ rebel.guild.owner.send(join)
  __~~Flame Bot~~__
  ╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱
 ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ 
- __created By__: ElBrazily#6286
+ __created By__: ElBrazily EG.#6286
 
 Server Support : https://discord.gg/wyMhrNw
 
