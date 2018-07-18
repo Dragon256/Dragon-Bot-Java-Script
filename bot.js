@@ -84,6 +84,7 @@ client.on('message',async message =>{
      var prefix = "%";
     let args = message.content.split(' ').slice(1).join(" ");
     if(message.content.startsWith(prefix + "say")) {
+		  if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("** 'MANAGE_MESSAGES' لا يوجد لديك برمشن  **").catch(console.error);
         if(!args) return message.reply('اكتب الكلام اللذي تريد البوت ان يكرره');
         message.channel.send(args);
     }
@@ -362,7 +363,7 @@ client.on('message', message => {
   
   %image -> صورة السيرفر
   
-  %say ->  ( يتطلب برمشن ``` MANAGE_MASSAGES ```) ليكرر البوت كلامك
+  %say ->  ( يتطلب برمشن  MANAGE_MASSAGES ) ليكرر البوت كلامك
   
   %time -> الاوقات
   -
