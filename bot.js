@@ -63,7 +63,28 @@ message.channel.sendEmbed(embed);
 });
 
 
-
+client.on('message', message => {
+    if (message.content.startsWith(".bot")) {
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``INFO : Flame Bot`` ')
+            .addField('``Uptime``', [timeCon(process.uptime())], true)
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true)
+            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+                  .addField('``My Prefix``' , `[%]` , true)
+                  .addField('``My Language``' , `[ Java Script ]` , true)
+                  .setFooter('By | ElBrazily ')
+    })
+}
+});
 
 
 client.on('message', message => {
@@ -288,11 +309,10 @@ client.on('message', message => {
   .setAuthor(message.author.username)
   .setFooter(`Flame Bot`, 'https://media.discordapp.net/attachments/468763296254918674/468790475072208897/c0b8a39938d7288757c04bbf3a11e814-d4qkrj6.png?width=267&height=161')
   .setColor("#000000")
-  .addField("*** قم بأختيار نوع المساعدة :*** ")
-  .addField("** %help-info ,| مميزات البوت ** ")
-  .addField("** %help-public ,| الأوامر العامة ** ")
-  .addField("** %help-admin ,| اوامر الأدارة ** ")
-  .addField("** %help-games ,| اوامر الألعاب ** ")
+  .addField('**قم بأختيار نوع المساعدة', '**')
+  .addField('| مميزات البوت ', '%help-info')
+  .addField('| الأوامر العامة', '%help-public')
+  .addField('| الأوامر الأدارية', '%help-admin')
 
   
   
