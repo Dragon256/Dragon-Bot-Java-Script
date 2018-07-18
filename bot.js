@@ -63,12 +63,12 @@ client.on("message", message => {
   
   %clear number-> حذف الشات بعدد
   
-   %tc name -> نشاء شات كتابي 
+  %tc name -> نشاء شات كتابي 
  
- %vc name  -> انشاء روم صوتي
+  %vc name  -> انشاء روم صوتي
   
- %bc massage -> برودكاست للسيرفر `)
-           .setColor("#57FEFF")
+  %bc massage -> برودكاست للسيرفر `)
+           .setColor("#7e0101")
      message.author.sendEmbed(embed)
      }
      }); 
@@ -335,7 +335,7 @@ client.on('message', message => {
   .setAuthor(message.author.username)
   .setFooter(`Flame Bot`, 'https://media.discordapp.net/attachments/468763296254918674/468790475072208897/c0b8a39938d7288757c04bbf3a11e814-d4qkrj6.png?width=267&height=161')
   .setColor("#000000")
-  .addField('**قم بأختيار نوع المساعدة', '**')
+  .addField('**قم بأختيار نوع المساعدة**', '.')
   .addField('| مميزات البوت ', '%help-info')
   .addField('| الأوامر العامة', '%help-public')
   .addField('| الأوامر الأدارية', '%help-admin')
@@ -478,8 +478,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By ElBrazily EG.#6286 ')
-		   .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
-		   .addField ('**اضافات جديدة قريباَ , **')
+		   .addField('اتمنى عجبكم البوت يا احلى ناس. :heart: ', '=-=-=-=-=-=-=-=-=-=')
+		   .addField('اضافات جديدة قريباَ ! , '=-=-=-=-=-=-=-=-=-=')
      message.author.sendEmbed(embed)
      
      }
@@ -493,8 +493,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By ElBrazily EG.#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
-		    .addField ('**اضافات جديدة قريباَ , **')
+           .addField('اتمنى عجبكم البوت يا احلى ناس. :heart: ', '=-=-=-=-=-=-=-=-=-=')
+		   .addField('اضافات جديدة قريباَ ! , '=-=-=-=-=-=-=-=-=-=')
      message.author.sendEmbed(embed)
      
      }
@@ -508,8 +508,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
-		    .addField ('**اضافات جديدة قريباَ , **')
+            .addField('اتمنى عجبكم البوت يا احلى ناس. :heart: ', '=-=-=-=-=-=-=-=-=-=')
+		   .addField('اضافات جديدة قريباَ ! , '=-=-=-=-=-=-=-=-=-=')
      message.author.sendEmbed(embed)
      
      }
@@ -524,8 +524,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-            .addField ('** اتمنى عجبكم البوت يا احلى ناس., :heart:**')
-		    .addField ('**اضافات جديدة قريباَ , **')
+             .addField('اتمنى عجبكم البوت يا احلى ناس. :heart: ', '=-=-=-=-=-=-=-=-=-=')
+		   .addField('اضافات جديدة قريباَ ! , '=-=-=-=-=-=-=-=-=-=')
      message.author.sendEmbed(embed)
      
      }
