@@ -415,8 +415,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By ElBrazily EG.#6286 ')
-		   .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:')
-           .setDescription(`**قريباَ جديدة اضافات **`)
+		   .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+		   .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
      }
