@@ -380,7 +380,7 @@ client.on('message', message => {
  
   
   
-client.on("message", message => {
+   client.on("message", message => {
       if (message.content === "%help-admin") {
        const embed = new Discord.RichEmbed() 
            .setColor("#57FEFF")
@@ -400,10 +400,9 @@ client.on("message", message => {
  %vc name  -> انشاء روم صوتي
   
  %bc massage -> برودكاست للسيرفر
-`)
      message.author.sendEmbed(embed)
      }
-     }); 
+     });
   
   
   
@@ -541,7 +540,7 @@ client.on('message', message => {
 
 
 
-var prefix = "%";
+var refix = "%";
 client.on("message", message => {
     if (message.author.bot) return;
     
