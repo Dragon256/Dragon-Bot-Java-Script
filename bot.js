@@ -384,7 +384,7 @@ client.on('message', message => {
       if (message.content === "%help-admin") {
        const embed = new Discord.RichEmbed() 
            .setColor("#57FEFF")
-           .setDescription(`**اوامر الادارة|Administrator Commands**
+           .addField(`**اوامر الادارة|Administrator Commands**
   %kick @mention -> طرد
  
   %ban @mention -> باند
