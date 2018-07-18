@@ -53,8 +53,6 @@ client.on("message", message => {
       if (message.content === "%help-admin") {
        const embed = new Discord.RichEmbed() 
            .setDescription(`**اوامر الإدارة | Administrator Commands
-           .setColor("#57FEFF")
-
   %kick @mention -> طرد
  
   %ban @mention -> باند
@@ -69,11 +67,11 @@ client.on("message", message => {
  
  %vc name  -> انشاء روم صوتي
   
- %bc massage -> برودكاست للسيرفر ')
-
+ %bc massage -> برودكاست للسيرفر `)
+           .setColor("#57FEFF")
      message.author.sendEmbed(embed)
      }
-     });
+     }); 
 
 
 
