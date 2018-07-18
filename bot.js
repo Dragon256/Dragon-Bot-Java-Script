@@ -430,7 +430,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس ❤️ 💛 💚 💙 💜 🖤__**`)
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
      }
@@ -444,7 +445,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس ❤️ 💛 💚 💙 💜 🖤__**`)
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
      }
@@ -459,7 +461,8 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
            .setFooter('By Dragon#6286 ')
-           .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس ❤️ 💛 💚 💙 💜 🖤__**`)
+            .addField ('** اتمنى عجبكم البوت يا احلى ناس. :heart:**')
+		    .addField ('**اضافات جديدة قريباَ , **')
      message.author.sendEmbed(embed)
      
      }
