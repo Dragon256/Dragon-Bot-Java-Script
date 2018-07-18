@@ -22,8 +22,14 @@ client.on('ready', () => {
 
 
 
-bot.on('message', async message => {
-  if(message.content.startsWith(prefix + "bot-sug")) {
+
+
+
+
+
+
+  client.on('message', async message => {
+  if(message.content.startsWith(prefix + "sug")) {
   await  message.channel.send(`اكتب اقتراحك الان`)
     let filter = m => m.author.id === message.author.id
       var text = '';
@@ -32,26 +38,11 @@ bot.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ اقتراحك الرجاء انتضار الرد من قبل المبرمجين`)
-
-                var embed = new Discord.RichEmbed()
-                   .setColor(0x00AE86)
-                         .setAuthor(message.author.username, message.author.avatarURL)   
-    .setTimestamp()
-            .setDescription(`
-   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
-
-${text} 
- 
-   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
-`)
-       .setThumbnail(`${message.author.avatarURL}`)
-
-   bot.channels.get("464110649308348426").sendEmbed(embed);
+                client.channels.get("464110649308348426").send(`${message.author.username}'s sug => ${text}`)
 
               })
             }
-          });
-  
+          })
 
 
 
