@@ -33,7 +33,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-  if (message.content === "-inv") {
+  if (message.content === "%inv") {
       if(!message.channel.guild) return;
   let embed = new Discord.RichEmbed()
   .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
@@ -47,14 +47,11 @@ message.channel.sendEmbed(embed);
 
 
 
-client.once('ready', () => {
-    client.user.setAvatar('./c0b8a39938d7288757c04bbf3a11e814-d4qkrj6');
-});
 
 
 
 client.on('message', message => {
-  if (message.content === "-bot") {
+  if (message.content === "%bot") {
       if(!message.channel.guild) return;
   let embed = new Discord.RichEmbed()
   .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
@@ -70,7 +67,7 @@ message.channel.sendEmbed(embed);
 
 
 client.on('message', message => {
-if (message.content.startsWith('-support')){
+if (message.content.startsWith('%support')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("random")
@@ -84,7 +81,7 @@ if (message.content.startsWith('-support')){
 
 
 client.on('message',async message =>{ 
-     var prefix = "-";
+     var prefix = "%";
     let args = message.content.split(' ').slice(1).join(" ");
     if(message.content.startsWith(prefix + "say")) {
         if(!args) return message.reply('اكتب الكلام اللذي تريد البوت ان يكرره');
@@ -100,7 +97,7 @@ client.on('message',async message =>{
 
 
 client.on('message', message => {
-  if (message.content.startsWith("-avatar")) {
+  if (message.content.startsWith("%avatar")) {
 
       var mentionned = message.mentions.users.first();
   var king66s;
@@ -125,7 +122,7 @@ client.on('guildMemberAdd', member => {
     var embed = new Discord.RichEmbed()
     .setThumbnail(member.user.avatarURL)
   .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
+    .setDescription('**بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا**')
     .setColor('RANDOM')
     .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
 var channel =member.guild.channels.find('name', 'welcome')
@@ -136,7 +133,7 @@ channel.send({embed : embed});
 
 
 client.on('message', message => {
-    var prefix = "-"
+    var prefix = "%"
 if (message.content.startsWith(prefix + "uptime")) {
    let uptime = client.uptime;
 
@@ -183,7 +180,7 @@ if (message.content.startsWith(prefix + "uptime")) {
 
 
 client.on("message", message => {
-    const prefix = "-"
+    const prefix = "%"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -206,7 +203,7 @@ client.on("message", message => {
 
 client.on('message', message => {
 
-    if (message.content === "-server") {
+    if (message.content === "%server") {
 var year = message.guild.createdAt.getFullYear()
 var month = message.guild.createdAt.getMonth()
 var day = message.guild.createdAt.getDate()
@@ -248,7 +245,7 @@ client.on('message', function(message) {
 
 
 client.on("message", (message) => {
-    if (message.content.startsWith("-tc")) {
+    if (message.content.startsWith("%tc")) {
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(" MANAGE_CHANNELS انت لا تملك برمشن  ");
             let args = message.content.split(" ").slice(1);
         message.guild.createChannel(args.join(' '), 'text');
@@ -261,7 +258,7 @@ client.on("message", (message) => {
 
 
 client.on("message", (message) => {
-    if (message.content.startsWith("-vc")) {
+    if (message.content.startsWith("%vc")) {
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(" MANAGE_CHANNELS انت لا تملك برمشن ");
             let args = message.content.split(" ").slice(1);
         message.guild.createChannel(args.join(' '), 'voice');
@@ -285,10 +282,10 @@ client.on('guildMemberAdd', member=> {
 
 
 client.on('message', message => {
-    if (message.content === "-help") {
+    if (message.content === "%help") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setFooter(`Dragon#6286`, 'https://images-ext-2.discordapp.net/external/X9SanEG0s7Dtv3krTgy-kod_fj6JRVJ2AG4JryCiiz0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/375761288518828042/fffa31c797e88cf059dd6db424ff456a.png?width=80&height=80')
+  .setFooter(`Flame Bot`, 'https://media.discordapp.net/attachments/468763296254918674/468790475072208897/c0b8a39938d7288757c04bbf3a11e814-d4qkrj6.png?width=267&height=161')
   .setColor("#000000")
   .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3: تم ارسال الرسالة في الخاص :white_check_mark: ")
   
@@ -323,7 +320,7 @@ client.on('message', message => {
   
   
    client.on("message", message => {
-    if (message.content === "-help") {
+    if (message.content === "%help-info") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
@@ -343,27 +340,27 @@ client.on('message', message => {
   
   
    client.on("message", message => {
-      if (message.content === "-help") {
+      if (message.content === "-help-public") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF0000")
            .setDescription(`**🕴🏾الاوامر العامة|Public Commands🕴🏾**
-  ** __-id__->**معلومات عنك
+  ** __%id__->**معلومات عنك
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-server__->**معلومات عن السيرفر
+  **__%server__->**معلومات عن السيرفر
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-Bot__->**معلومات عن البوت
+  **__%Bot__->**معلومات عن البوت
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-ping__->**سرعة اتصال البوت
+  **__%ping__->**سرعة اتصال البوت
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-avatar__->**لعرض صورتك وعرض صور الاخرين , مع المنشن
+  **__%avatar__->**لعرض صورتك وعرض صور الاخرين , مع المنشن
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-   **__-image__->**صورة السيرفر
+   **__%image__->**صورة السيرفر
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-say__->**ليكرر البوت كلامك
+  **__%say__->**ليكرر البوت كلامك
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-time__->**الاوقات
+  **__%time__->**الاوقات
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  **__-help__->**تظهر لك هذي القائمة
+  **__%help-public__->**تظهر لك هذي القائمة
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
      message.author.sendEmbed(embed)
      
@@ -906,7 +903,7 @@ if (message.content.startsWith(admin + 'setavatar')) {
 
 
 
-let points = JSON.parse(fs.readFileSync('points.json', 'utf8'));
+let points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
 client.on('message', message => {
     if (!points[message.author.id]) points[message.author.id] = {points : 0}
     if (message.content == '%نقاطي'){
@@ -940,7 +937,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
 	    if (message.content == "%ركب") {    
@@ -966,7 +963,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
 	    if (message.content == "%رياضيات") {    
@@ -992,7 +989,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
 	
@@ -1019,7 +1016,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
     if (message.content == "%لغز") {
@@ -1045,7 +1042,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
   if (message.content == "%تحدي") {    
@@ -1071,7 +1068,7 @@ client.on('message', message => {
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
+    fs.writeFile('./points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     });
 
