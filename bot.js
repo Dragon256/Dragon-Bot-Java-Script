@@ -1116,19 +1116,6 @@ if(!message.channel.guild) return message.reply('هذا الأمر للسيرف�
              });
 
 
-
-
-
-			 
-			   client.on('guildCreate', rebel => {
-let Rebel = rebel.guild.owner;
-let codes = rebel.roles.find('name', 'Partner');
-let join = [`شرفتنآآ بدخول بوت ${client.tag}
-إلى سيرفرك المحترم ${rebel.guild.name}
-سبورت البوت <https://discord.gg/wyMhrNw>ءء`]
-rebel.guilds.get("463104522773069825").guild.member(Rebel).addRole(codes)
-rebel.guild.owner.send(join)
-});
 			 
 			 
 			 
