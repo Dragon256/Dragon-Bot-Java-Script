@@ -1194,7 +1194,7 @@ client.on("roleCreate", rc => {
   }
   });
 
-client.on("channelCreate",  cc => {
+client.on("channelCreate",cc => {
   const channel = cc.guild.channels.find("name", "log")
   if(channel) {
   var embed = new Discord.RichEmbed()
