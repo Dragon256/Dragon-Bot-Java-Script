@@ -49,6 +49,34 @@ message.channel.sendEmbed(embed);
 
 
 
+client.on("message", message => {
+      if (message.content === "%help-admin") {
+       const embed = new Discord.RichEmbed() 
+           .setDescription(**اوامر الادارة |Administrator Commands**
+           .setColor("#57FEFF")
+
+  %kick @mention -> طرد
+ 
+  %ban @mention -> باند
+  
+  %mute @mention -> ميوت
+  
+  %unmute @mention -> فك ميوت
+  
+  %clear number-> حذف الشات بعدد
+  
+   %tc name -> نشاء شات كتابي 
+ 
+ %vc name  -> انشاء روم صوتي
+  
+ %bc massage -> برودكاست للسيرفر ')
+
+     message.author.sendEmbed(embed)
+     }
+     });
+
+
+
 
 client.on('message', message => {
   if (message.content === "%bot") {
@@ -63,10 +91,9 @@ message.channel.sendEmbed(embed);
 });
 
 
-client.on('message', message => {
+ client.on('message', message => {
     if (message.content.startsWith("%bot")) {
-    message.channel.send({
-        embed: new Discord.RichEmbed()
+        var embed = new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
@@ -82,9 +109,11 @@ client.on('message', message => {
                   .addField('``My Prefix``' , `[%]` , true)
                   .addField('``My Language``' , `[ Java Script ]` , true)
                   .setFooter('By | ElBrazily ')
-    })
+    message.channel.send(embed);
 }
-});
+}); 
+
+
 
 
 client.on('message', message => {
