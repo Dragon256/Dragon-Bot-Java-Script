@@ -395,7 +395,7 @@ client.on('message', message => {
   
   %clear number-> حذف الشات بعدد
   
-   %tc name -> نشاء شات كتابي 
+  %tc name -> نشاء شات كتابي 
  
  %vc name  -> انشاء روم صوتي
   
