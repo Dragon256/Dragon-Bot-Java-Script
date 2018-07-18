@@ -380,30 +380,7 @@ client.on('message', message => {
  
   
   
-   client.on("message", message => {
-      if (message.content === "%help-public") {
-       const embed = new Discord.RichEmbed() 
-           .setColor("#FF0000")
-           .setDescription(`**اوامر الأدارة|Administrator Commands**
 
-  %kick @mention -> طرد
- 
-  %ban @mention -> باند
-  
-  %mute @mention -> ميوت
-  
-  %unmute @mention -> فك ميوت
-  
-  %clear number-> حذف الشات بعدد
-  
-  %tc name -> نشاء شات كتابي 
- 
- %vc name  -> انشاء روم صوتي
-  
- %bc massage -> برودكاست للسيرفر
-     message.author.sendEmbed(embed)
-     }
-     });
   
   
   
