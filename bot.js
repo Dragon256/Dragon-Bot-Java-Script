@@ -21,6 +21,54 @@ client.on('ready', () => {
 
 
 
+client.on('message', message => {
+var args = message.content.split(" ").slice(1);    
+if(message.content.startsWith(prefix + 'id')) {
+var year = message.author.createdAt.getFullYear()
+var month = message.author.createdAt.getMonth()
+var day = message.author.createdAt.getDate()
+var men = message.mentions.users.first();  
+let args = message.content.split(' ').slice(1).join(' ');
+if (args == '') {
+var z = message.author;
+}else {
+var z = message.mentions.users.first();
+}
+
+let d = z.createdAt;          
+let n = d.toLocaleString();   
+let x;                       
+let y;                        
+
+if (z.presence.game !== null) {
+y = `${z.presence.game.name}`;
+} else {
+y = "No Playing... |💤.";
+}
+let embed = new Discord.RichEmbed()
+.setColor("#502faf")
+.addField(': 🔱 | اسمك',`**<@` + `${z.id}` + `>**`, true)
+.addField(': 🛡 | ايديك', "**"+ `${z.id}` +"**",true)
+.addField(': ♨ | Playing','**'+y+'**' , true)
+.addField(': 📛 | تاق حق حسابك',"**#" +  `${z.discriminator}**`,true)
+.addField('**: 📆 | التاريح الذي انشئ فيه حسابك**', message.author.createdAt.toLocaleString())
+.addField("**: ⌚ | تاريخ دخولك للسيرفر**", message.member.joinedAt.toLocaleString())    
+
+.setThumbnail(`${z.avatarURL}`)
+.setFooter(message.author.username, message.author.avatarURL)
+
+message.channel.send({embed});
+    if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
+console.log('[id] Send By: ' + message.author.username)
+}
+
+});
+
+
+
+
+
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
