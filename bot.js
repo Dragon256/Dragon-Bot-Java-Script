@@ -380,7 +380,7 @@ client.on('message', message => {
   
  
   
-  var refix = "%"
+
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
