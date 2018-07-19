@@ -22,6 +22,58 @@ client.on('ready', () => {
 
 
 
+
+  client.on('message', message => {
+          
+
+           if (message.content.startsWith(prefix + "user")) {
+                     if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
+
+                message.guild.fetchInvites().then(invs => {
+      let member = client.guilds.get(message.guild.id).members.get(message.author.id);
+      let personalInvites = invs.filter(i => i.inviter.id === message.author.id);
+      let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
+      var moment = require('moment');
+      var args = message.content.split(" ").slice(1);
+let user = message.mentions.users.first();
+var men = message.mentions.users.first();
+ var heg;
+ if(men) {
+     heg = men
+ } else {
+     heg = message.author
+ }
+var mentionned = message.mentions.members.first();
+  var h;
+ if(mentionned) {
+     h = mentionned
+ } else {
+     h = message.member
+ }
+        moment.locale('ar-TN');
+      var id = new  Discord.RichEmbed()
+       
+    .setColor("#0a0909")
+ .setThumbnail(message.author.avatarURL)
+.addField(': تاريخ دخولك للديسكورد',` \`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true) 
+.addField(': تاريخ دخولك لسيرفرنا', `\`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(h.joinedAt).fromNow()} **`, true)
+
+.setFooter(message.author.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')  
+    message.channel.sendEmbed(id);
+})
+}
+    
+
+         
+     });
+
+
+
+
+
+
+
+
  const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',     'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',     'كت تويت | الحرية لـ ... ؟',     'كت تويت | قناة الكرتون المفضلة في طفولتك؟',     'كت تويت ‏| كلمة للصُداع؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت | موقف مميز فعلته مع شخص ولا يزال يذكره لك؟',     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',     'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',     '‏كت تويت | عمرك شلت مصيبة عن شخص برغبتك ؟',     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',     '‏كت تويت | وش يفسد الصداقة؟',     '‏كت تويت | شخص لاترفض له طلبا ؟',     '‏كت تويت | كم مره خسرت شخص تحبه؟.',     '‏كت تويت | كيف تتعامل مع الاشخاص السلبيين ؟',     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',     '‏كت تويت |أقوى كذبة مشت عليك ؟',     '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',     '‏كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',     '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',     '‏كت تويت | مطلبك الوحيد الحين ؟',     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',]
 
  client.on('message', message => {
