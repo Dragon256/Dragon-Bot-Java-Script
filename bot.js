@@ -1415,7 +1415,7 @@ if(!message.channel.guild) return message.reply('هذا الأمر للسيرف�
 ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ 
  __created By__: ElBrazily EG.#6286
 
-Server Support : https://discord.gg/wyMhrNw
+Server Support : https://discord.gg/AfDqvKz
 
 bot link : https://discordapp.com/api/oauth2/authorize?client_id=468782344183087114&permissions=8&scope=bot
 `);
@@ -1474,18 +1474,7 @@ message.channel.send('** :white_check_mark: تم الارسال في الخاص*
 
 
 
-client.on("message", (message) => {
-                 if (message.content.startsWith('%delete')) {
-if(!message.channel.guild) return message.reply('هذا الأمر للسيرفرات فقط')
-                     if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("انت لا تمتلك صلاحيه `MANAGE_CHANNELS`");
 
-                     let args = message.content.split(' ').slice(1);
-                     let channel = message.client.channels.find('name', args.join(' '));
-                     if (!channel) return message.reply('**لا يوجد روم صوتي او شات كتابي بهذا الأسم**')
-                     channel.delete()
-                     message.channel.sendMessage('❌ تـم حـذف الـروم الـصوتـي او الـشـات الـكـتـابـي')
-                 }
-             });
 
 		
 			 
@@ -1518,34 +1507,7 @@ client.on('message', message => {
 
 
 
-const moment = require('moment');
-client.on('message', message => {
-             var prefix = "$"
-if (message.content.startsWith(prefix + "time")) {
-let user = message.mentions.users.first();
-var args = message.content.split(" ").slice(1);
-var men = message.mentions.users.first();
-var heg;
-if(men) {
-heg = men
-} else {
-heg = message.author
-}
-var mentionned = message.mentions.members.first();
-var h;
-if(mentionned) {
-h = mentionned
-} else {
-h = message.member
-}
-moment.locale('ar-TN'); //TN
-var id = new  Discord.RichEmbed()
-.setColor("RANDOM")
-.setAuthor(`${heg.username}#${heg.discriminator} `,heg.avatarURL)
-.setDescription([`**الوقت**${moment().format('HH:mm:ss A')}${moment().format('YYYY/M/D')}**اليوم** :${moment().format('dddd')}**التاريخ**`])
-message.channel.send(id)
-};
-});
+
 
 
 
