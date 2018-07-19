@@ -20,14 +20,7 @@ client.on('ready', () => {
 
 
 
-client.on("message", (message) => {
-    const command = message.content.split(" ")[0];
-    const args = message.content.split(" ").slice();
-  if(command === "%deaf"){
-       let member = message.mentions.users.first(); 
-    message.guild.members.get(member.id).setDeaf(true);
-   }
-}).catch(console.error);
+
 
 
 
