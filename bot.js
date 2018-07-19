@@ -214,7 +214,7 @@ client.on('guildMemberAdd', member => {
                       
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**SERVER NAME **")
+     .setFooter("Flame Bot")
         .setTimestamp()
     
       channel.sendEmbed(embed);
