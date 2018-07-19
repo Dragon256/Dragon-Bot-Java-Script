@@ -29,7 +29,7 @@ client.on('message', message => {
         ,Image = new Canvas.Image
         ,canvas = new Canvas(450, 170)
         ,ctx = canvas.getContext('2d');
-        ctx.font = '40px Impact';
+        ctx.font = '20px Impact';
         let args = message.content.split(" ").slice(1);
         Image.src = canvas.toBuffer();
         ctx.drawImage(Image, 0, 0, Image.width / 470, Image.height / 170);
